@@ -1,0 +1,227 @@
+/* ------------------- 全局設定 ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+hr {
+    width: 100%;
+    border: 0;
+}
+
+/* ------------------- 主要佈局樣式 ------------------- */
+.wheel-section {
+    display: flex; /* 將內容排成橫向排列 */
+}
+.wheel-container {
+    margin: 0 auto; /* 置中顯示輪盤容器 */
+}
+textarea {
+    height: 500px;
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    resize: none;
+    font-size: 24px;
+}
+
+/* ------------------- 控制按鈕區域 ------------------- */
+.control-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px; /* 控制按鈕容器的最大寬度 */
+}
+.control-buttons button {
+    color: white;
+    margin-top: 20px;
+    padding: 10px 150px; /* 設定按鈕內間距 */
+    font-size: 18px;
+    border: 0;
+    border-radius: 20px;
+}
+
+/* 單一按鈕樣式 */
+#startBtn { background-color: #4caf50; }
+#resetBtn { background-color: #e74c3c; }
+#saveBtn { background-color: #3498db; }
+#loadBtn { background-color: #f1c40f; color: #333; }
+#startBtn:hover, #resetBtn:hover, #saveBtn:hover, #loadBtn:hover, #bathBtn:hover{
+    opacity: 0.8;
+}
+
+/* ------------------- 存取按鈕區塊 ------------------- */
+.save-load-block {
+    width: 336px;
+    display: flex;
+    justify-content: space-between; /* 兩邊對齊 */
+    flex-wrap: wrap;
+}
+.save-load-block button {
+    padding: 10px 50px; /* 控制按鈕內部間距 */
+}
+
+/* ------------------- 輪盤與結果顯示區 ------------------- */
+.wheel-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* 結果區塊框架 */
+.current-result, .record-section {
+    border: 3px solid #888;
+    border-radius: 5px;
+    height: auto;
+    margin: 50px 0;
+}
+
+/* 標題樣式 */
+.result-title, .record-title{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding: 15px 100px;
+    background-color: #888;
+}
+
+/* 文字顯示區 */
+.result-display, .record-list {
+    text-align: center;
+    font-size: 30px;
+}
+.result-display {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+/* ------------------- 設定區塊與工具樣式 ------------------- */
+/* 設定 */
+.settings {
+    width: 350px;
+    border: 3px solid #888;
+    border-radius: 5px;
+    height: 200px;
+    margin: 0px 20px;
+    margin-bottom: 100px;
+
+}
+.settings-title{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding: 15px 100px;
+    background-color: #888;
+}
+.setting{
+    padding: 10px;
+    font-size: 30px;
+}
+.setting-checkbox{
+    label{
+        font-size: 18px;
+    }
+    input{
+        transform: scale(1.5);
+    }
+}
+.setting-speed{
+    label{
+        font-size: 25px;
+    }
+}
+#customSpinSpeed{
+    font-size: 25px;
+}
+/* 工具 */
+.tools{
+    width: 350px;
+    border: 3px solid #888;
+    border-radius: 5px;
+    height: 200px;
+    margin: 0 20px;
+}
+.tool-title{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding: 15px 100px;
+    background-color: #888;
+}
+
+.batch {
+    text-align: center;
+}
+
+.batch h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.batch-input {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.batch-input input {
+    width: 80px;
+    padding: 8px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.batch-btn {
+    border: 0px;
+    margin-top: 10px;
+    background: #8e44ad;
+    color: white;
+    padding: 10px 50px; /* 設定按鈕內間距 */
+    font-size: 18px;
+    border: 0;
+    border-radius: 20px;
+}
+
+/* ------------------- 表格樣式 ------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+/* 表格標題欄樣式 */
+th {
+    border-right: 1px solid #ddd;
+    padding: 12px 15px;
+}
+
+/* 表格儲存格樣式 */
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+td {
+    padding: 12px 100px;
+}
+
+/* 表格行交替背景顏色 */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* ------------------- 響應式設計調整 ------------------- */
+@media (max-width:900px) {
+    .save-load-block button {
+        padding: 10px 150px; /* 在較小螢幕上擴大按鈕的內間距 */
+    }
+}
